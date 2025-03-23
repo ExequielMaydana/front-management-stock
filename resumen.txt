@@ -1,0 +1,66 @@
+src/
+├── app/
+│   ├── core/                  # Servicios y módulos globales de la aplicación
+│   │   ├── auth/              # Autenticación, login, signUp, etc.
+│   │   │   ├── auth.service.ts
+│   │   │   ├── auth.interceptor.ts
+│   │   │   ├── auth.guard.ts
+│   │   ├── config/            # Configuración global (variables, settings)
+│   │   │   ├── environment.ts
+│   │   ├── models/            # Modelos globales
+│   │   │   ├── user.model.ts
+│   │   │   ├── producto.model.ts
+│   │   │   ├── venta.model.ts
+│   │   └── services/          # Servicios comunes como HTTP client
+│   │       ├── http.service.ts
+│   ├── features/              # Módulos de funcionalidad principal
+│   │   ├── auth/              # Módulo para autenticación (login, signUp)
+│   │   │   ├── auth.component.ts
+│   │   │   ├── auth.component.html
+│   │   │   ├── auth.component.scss
+│   │   │   ├── auth.module.ts
+│   │   ├── clientes/          # Módulo de clientes (ver, crear, editar, eliminar)
+│   │   │   ├── components/
+│   │   │   │   ├── cliente-list.component.ts
+│   │   │   │   ├── cliente-detail.component.ts
+│   │   │   │   ├── cliente-create.component.ts
+│   │   │   ├── services/
+│   │   │   │   ├── cliente.service.ts
+│   │   │   ├── store/
+│   │   │       ├── actions/
+│   │   │       │   ├── cliente.actions.ts
+│   │   │       ├── effects/
+│   │   │       │   ├── cliente.effects.ts
+│   │   │       ├── reducers/
+│   │   │       │   ├── cliente.reducer.ts
+│   │   │       ├── selectors/
+│   │   │       │   ├── cliente.selectors.ts
+│   │   ├── productos/         # Módulo de productos (crear, ver, editar, eliminar)
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   ├── store/
+│   │   ├── ventas/            # Módulo de ventas
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   ├── store/
+│   │   ├── dashboard/         # Dashboard del cliente
+│   │   │   ├── components/    # Componentes del dashboard
+│   │   │   ├── dashboard.module.ts
+│   ├── shared/                # Componentes, servicios y directivas compartidas
+│   │   ├── components/
+│   │   │   ├── navbar.component.ts
+│   │   │   ├── footer.component.ts
+│   │   ├── directives/
+│   │   │   ├── highlight.directive.ts
+│   │   ├── pipes/
+│   │   │   ├── capitalize.pipe.ts
+│   │   ├── services/          # Servicios compartidos
+│   │   │   ├── toast.service.ts
+│   ├── app-routing.module.ts  # Configuración de rutas globales
+│   ├── app.module.ts          # Módulo raíz de la aplicación
+│
+├── assets/                    # Archivos estáticos (imágenes, iconos, etc.)
+├── environments/              # Variables de entorno
+│   ├── environment.ts         # Desarrollo
+│   ├── environment.prod.ts    # Producción
+└── index.html                 # HTML principal
