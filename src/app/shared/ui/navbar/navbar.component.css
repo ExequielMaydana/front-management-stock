@@ -1,0 +1,61 @@
+/* Configuración del sidenav (menú móvil) */
+.sidenav-container {
+  height: 100%; /* Aseguramos que ocupe toda la altura de la pantalla */
+  display: flex;
+}
+
+.sidenav {
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Lo posicionamos fijo para que cubra toda la pantalla */
+  top: 0;
+  right: 0;
+  z-index: 1000; /* Aseguramos que esté encima de otros elementos */
+  transform: translateX(100%); /* Lo inicializamos fuera de pantalla */
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidenav.mat-drawer-opened {
+  transform: translateX(0); /* Cuando el sidenav se abre, lo mostramos */
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #333;
+  cursor: pointer;
+  z-index: 1050;
+}
+
+.mobile-menu button {
+  color: #1a1b1f;
+}
+
+.auth-buttons button{
+  color: #005CBB;
+}
+
+/* Estilos para pantallas grandes (md y superiores) */
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none; 
+  }
+
+  .sidenav {
+    display: none;
+  }
+}
+

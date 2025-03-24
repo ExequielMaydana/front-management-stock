@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* Tailwind CSS */
+@import "tailwindcss";
+
+/* Estilos globales */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body.dark {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #121212;
+}
+
+body.dark .mat-icon {
+  color: #ffffff;
+}
+
+/* MENU MOBILE */
+body.dark .sidenav {
+  background-color: #333333;
+}
+
+body.dark .sidenav .close-button {
+  color: #EAEBED;
+}
+
+body.dark .sidenav .mobile-menu button{
+  color: #EAEBED ;
+}
+
+auth-body.dark, .auth-buttons .mdc-button__label{
+  color: #005CBB !important;
+}
+
+
+/* MENU DESKTOP */
+body.dark .menu-desktop button {
+  color: #ffffff !important;
+}
+
+
+body.dark .mat-toolbar {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
