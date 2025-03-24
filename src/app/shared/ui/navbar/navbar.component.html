@@ -1,0 +1,66 @@
+<div>
+  <mat-toolbar color="primary" class="flex items-center justify-between p-4">
+    <div class="logo">
+      <h1>LOGO</h1>
+      <!-- <img src="assets/logo.png" alt="Logo" class="w-20" /> -->
+    </div>
+
+    <!-- Menú en pantallas grandes -->
+    <div class="menu-desktop hidden space-x-6 md:flex justify-end flex-1 mr-1">
+      <button mat-button routerLink="/">Inicio</button>
+      <button mat-button routerLink="/about">Sobre Nosotros</button>
+      <button mat-button routerLink="/services">Servicios</button>
+      <button mat-button routerLink="/contact">Contacto</button>
+    </div>
+
+    <!-- Botones de Registro e Inicio de Sesión -->
+    <div class="hidden auth-buttons md:flex space-x-4 justify-end">
+      <button mat-raised-button color="accent" routerLink="/auth/login">
+        Iniciar Sesión
+      </button>
+      <button mat-raised-button color="accent" routerLink="/auth/register">
+        Registrarse
+      </button>
+    </div>
+
+    <!-- Botón para cambiar tema -->
+    <button mat-icon-button (click)="toggleTheme()" class="ml-4">
+      <mat-icon>{{ isDarkMode ? "light_mode" : "dark_mode" }}</mat-icon>
+    </button>
+
+    <!-- Botón para abrir el menú (solo en pantallas pequeñas) -->
+    <button mat-icon-button class="menu-button" (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav-container
+    class="mat-drawer-container mat-sidenav-container sidenav-container"
+  >
+    <mat-sidenav
+      #sidenav
+      mode="over"
+      position="end"
+      class="mat-drawer mat-sidenav sidenav"
+    >
+      <!-- Botón de cierre -->
+      <button class="close-button" (click)="closeSidenav()">×</button>
+
+      <!-- El menú móvil -->
+      <div class="mobile-menu">
+        <button mat-button routerLink="/">Inicio</button>
+        <button mat-button routerLink="/about">Sobre Nosotros</button>
+        <button mat-button routerLink="/services">Servicios</button>
+        <button mat-button routerLink="/contact">Contacto</button>
+        <div class="auth-buttons flex flex-col gap-4">
+          <button mat-raised-button routerLink="/auth/login">
+            Iniciar Sesión
+          </button>
+          <button mat-raised-button routerLink="/auth/register">
+            Registrarse
+          </button>
+        </div>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>
