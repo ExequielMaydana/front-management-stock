@@ -1,0 +1,50 @@
+.sidenav-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 1em;
+    background-color: transparent; /* ya es blanco el sidenav padre */
+    color: var(--color-text);
+  }
+  
+  .sidenav-logo {
+    padding-top: 1em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  
+  .custom-panel {
+    background-color: transparent;
+    color: var(--color-text);
+    border: none;
+    box-shadow: none;
+    margin: 1em 0;
+  }
+  
+  .panel-icon {
+    margin-right: 0.5rem;
+    color: var(--color-accent);
+  }
+  
+  .sub-item {
+    padding-left: 2rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease;
+    font-size: 0.95rem;
+  }
+  
+  .sub-item:hover {
+    background-color: var(--color-surface);
+  }
+  
+  .sidenav-footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    padding-bottom: 1em;
+  }
+  

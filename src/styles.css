@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Colores base */
+  --color-bg: #ffffff; /* Fondo general blanco */
+  --color-surface: #f3f4f6; /* Superficies claras (gris muy claro) */
+  --color-primary: #1f2937; /* Gris oscuro elegante */
+  --color-accent: #2563eb; /* Azul intenso (acento, botones, links) */
+  --color-error: #dc2626; /* Rojo para errores */
+
+  /* Texto */
+  --color-text: #1f2937; /* Texto principal */
+  --color-muted: #6b7280; /* Texto secundario */
+
+  /* Bordes y sombras */
+  --border-radius: 0.5rem;
+  --box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg); /* 👈 Esto es opcional pero útil */
+  color: var(--color-text); /* 👈 Estilo base para todo el texto */
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-mdc-menu-content {
+  background-color: #ffffff !important;
+}

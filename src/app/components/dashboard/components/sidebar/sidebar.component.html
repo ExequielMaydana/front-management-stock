@@ -1,0 +1,23 @@
+<div class="sidenav-container">
+  <!-- Logo -->
+  <div class="sidenav-logo">LOGO</div>
+
+  <!-- Menú principal -->
+  <mat-nav-list class="sidenav-list">
+    @for (item of menuItems; track item.title) {
+    <mat-expansion-panel class="custom-panel">
+      <mat-expansion-panel-header>
+        <mat-icon class="panel-icon">{{ item.icon }}</mat-icon>
+        <span>{{ item.title }}</span>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        @for (sub of item.subItems; track sub) {
+        <a mat-list-item class="sub-item">{{ sub }}</a>
+        }
+      </ng-template>
+    </mat-expansion-panel>
+    }
+  </mat-nav-list>
+
+  <div class="sidenav-footer">© 2025 TuApp</div>
+</div>

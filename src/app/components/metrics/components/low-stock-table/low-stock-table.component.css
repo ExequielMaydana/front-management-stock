@@ -1,0 +1,33 @@
+.table-card {
+    background-color: var(--color-bg);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-md);
+  }
+  
+  .table-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    color: var(--color-text);
+    font-weight: 600;
+    background-color: var(--color-surface);
+  }
+  
+  td {
+    color: var(--color-text);
+  }
+  
+  .mat-elevation-z1 {
+    box-shadow: var(--box-shadow-sm);
+  }
+  

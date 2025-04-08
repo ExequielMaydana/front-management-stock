@@ -1,0 +1,16 @@
+<mat-card class="chart-card">
+  <div class="chart-title">📊 Ventas por período</div>
+  <ngx-charts-bar-vertical
+    [results]="salesData"
+    [scheme]="'natural'"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="false"
+    [view]="[500, 400]"
+    [showDataLabel]="true"
+    [roundDomains]="true"
+    [barPadding]="5"
+    [animations]="true"
+  >
+  </ngx-charts-bar-vertical>
+</mat-card>

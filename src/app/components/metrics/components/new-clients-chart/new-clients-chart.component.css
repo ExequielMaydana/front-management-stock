@@ -1,0 +1,21 @@
+.chart-card {
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-md);
+  width: 100%;
+}
+
+.chart-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1em 0 0 1em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-text);
+  
+}
+.chart-content {
+  margin-top: 1em;
+  width: 100%;
+}

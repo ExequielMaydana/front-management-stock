@@ -1,0 +1,88 @@
+.dashboard-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Sidebar (el mat-sidenav) */
+  .dashboard-sidenav {
+    width: 18rem; 
+    height: 100%;
+    background-color: #ffffff;
+    color: var(--color-text);
+    box-shadow: var(--box-shadow-md);
+  }
+  
+  /* Contenido principal */
+  .dashboard-content {
+    background-color: var(--color-primary); /* gris oscuro elegante */
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  /* Barra superior */
+  .dashboard-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    box-shadow: var(--box-shadow-md);
+    background-color: #ffffff;
+    color: var(--color-text);
+  }
+  
+  /* Iconos derechos */
+  .toolbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .icon-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: none;
+    transition: transform 0.2s ease;
+  }
+  
+  .icon-button:hover {
+    transform: scale(1.1); /* efecto sutil al pasar el mouse */
+  }
+  
+  .icon-button:active {
+    transform: scale(1); /* efecto sutil al pasar el mouse */
+  }
+  
+  .icon-button mat-icon {
+    color: var(--color-text);
+    font-size: 1.5rem; /* ícono un poco más grande */
+  }
+  
+  .icon-button__menu{
+    padding: .3em;
+    border: 1px solid var(--color-primary);
+  }
+  
+  /* Main */
+  .dashboard-main {
+    padding: 1.5rem;
+  }
+  
+  /* Títulos */
+  .dashboard-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard-subtitle {
+    color: var(--color-muted);
+  }
+  
+  .cdk-overlay-pane .mat-mdc-menu-content{
+    background-color: #ffffff !important;
+  }
+  
+  

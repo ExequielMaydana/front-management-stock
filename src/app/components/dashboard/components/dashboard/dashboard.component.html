@@ -1,0 +1,65 @@
+<mat-sidenav-container class="dashboard-container">
+  <!-- Sidebar -->
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [(opened)]="isSidebarOpened"
+    class="dashboard-sidenav"
+  >
+    <app-sidebar />
+  </mat-sidenav>
+
+  <!-- Contenido principal -->
+  <mat-sidenav-content class="dashboard-content">
+    <!-- Barra superior -->
+    <mat-toolbar class="dashboard-toolbar" color="primary">
+      <!-- Botón toggle sidebar -->
+      <button
+        mat-icon-button
+        class="icon-button icon-button__menu"
+        (click)="toggleSidebar()"
+      >
+        @if(isSidebarOpened){
+        <mat-icon>chevron_left</mat-icon>
+
+        }@else {
+        <mat-icon>chevron_right</mat-icon>
+
+        }
+      </button>
+
+      <!-- Iconos lado derecho -->
+      <div class="toolbar-icons">
+        <button mat-icon-button class="icon-button">
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="configMenu"
+          class="icon-button"
+        >
+          <mat-icon>settings</mat-icon>
+        </button>
+        <mat-menu #configMenu="matMenu" class="custom-menu menuchico">
+          <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Mi perfil</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            <span>Cerrar sesión</span>
+          </button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+
+    <!-- Contenido del dashboard -->
+    <main class="dashboard-main">
+      <h1 class="dashboard-title">Dashboard</h1>
+      <p class="dashboard-subtitle">
+        Bienvenido al panel de control de tu membresía.
+      </p>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
