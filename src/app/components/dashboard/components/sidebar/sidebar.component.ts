@@ -9,7 +9,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
-  isSidebarOpened = true;
 
   menuItems = [
     {
@@ -17,11 +16,11 @@ export class SidebarComponent {
       icon: 'dashboard',
       subItems: ['Resumen', 'Actividad'],
     },
-    {
-      title: 'Métricas',
-      icon: 'bar_chart',
-      subItems: ['Estadísticas', 'Comparativas'],
-    },
+    // {
+    //   title: 'Métricas',
+    //   icon: 'bar_chart',
+    //   subItems: ['Estadísticas', 'Comparativas'],
+    // },
     {
       title: 'Productos',
       icon: 'inventory_2',

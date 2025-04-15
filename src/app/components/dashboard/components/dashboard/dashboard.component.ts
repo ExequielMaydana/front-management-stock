@@ -19,7 +19,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent {
-  isSidebarOpened = false;
+  isSidebarOpened = true;
 
   toggleSidebar() {
     this.isSidebarOpened = !this.isSidebarOpened;
