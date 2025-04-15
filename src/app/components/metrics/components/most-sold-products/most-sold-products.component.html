@@ -1,0 +1,14 @@
+<mat-card class="chart-card">
+    <div class="chart-title">🍩 Productos más vendidos</div>
+  
+    <ngx-charts-pie-chart
+      [results]="productSales"
+      [legend]="true"
+      [labels]="true"
+      [doughnut]="true"  
+      [view]="[500, 0]"
+      [scheme]="colorScheme"
+      [explodeSlices]="false"
+      [gradient]="false">
+    </ngx-charts-pie-chart>
+  </mat-card>
